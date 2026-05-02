@@ -1,0 +1,19 @@
+package com.example.janagroandroid.di
+
+import android.content.Context
+import com.example.janagroandroid.data.local.AppDatabase
+import com.example.janagroandroid.data.remote.RetrofitClient
+import com.example.janagroandroid.data.repository.AppRepository
+
+object AppGraph {
+    fun repository(context: Context): AppRepository {
+        val db = AppDatabase.getInstance(context)
+        return AppRepository(
+            userDao = db.userDao(),
+            productDao = db.productDao(),
+            cartDao = db.cartDao(),
+            historyDao = db.historyDao(),
+            apiService = RetrofitClient.apiService
+        )
+    }
+}

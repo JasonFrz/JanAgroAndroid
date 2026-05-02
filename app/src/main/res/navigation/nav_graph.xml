@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.janagroandroid.ui.splash.SplashFragment"
+        android:label="Splash">
+        <action android:id="@+id/action_splashFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_splashFragment_to_homeFragment" app:destination="@id/homeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.janagroandroid.ui.auth.LoginFragment"
+        android:label="Login">
+        <action android:id="@+id/action_loginFragment_to_registerFragment" app:destination="@id/registerFragment"/>
+        <action android:id="@+id/action_loginFragment_to_homeFragment" app:destination="@id/homeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.janagroandroid.ui.auth.RegisterFragment"
+        android:label="Register">
+        <action android:id="@+id/action_registerFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.janagroandroid.ui.home.HomeFragment"
+        android:label="Home">
+        <action android:id="@+id/action_homeFragment_to_productDetailFragment" app:destination="@id/productDetailFragment"/>
+        <action android:id="@+id/action_homeFragment_to_addProductFragment" app:destination="@id/addProductFragment"/>
+        <action android:id="@+id/action_homeFragment_to_sellerDashboardFragment" app:destination="@id/sellerDashboardFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.janagroandroid.ui.product.ProductDetailFragment"
+        android:label="Detail">
+        <argument android:name="productId" app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.janagroandroid.ui.cart.CartFragment"
+        android:label="Cart">
+        <action android:id="@+id/action_cartFragment_to_checkoutFragment" app:destination="@id/checkoutFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.janagroandroid.ui.checkout.CheckoutFragment"
+        android:label="Checkout"/>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.janagroandroid.ui.history.HistoryFragment"
+        android:label="History"/>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.janagroandroid.ui.profile.ProfileFragment"
+        android:label="Profile">
+        <action android:id="@+id/action_profileFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/sellerDashboardFragment"
+        android:name="com.example.janagroandroid.ui.seller.SellerDashboardFragment"
+        android:label="Dashboard">
+        <action android:id="@+id/action_sellerDashboardFragment_to_addProductFragment" app:destination="@id/addProductFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.janagroandroid.ui.seller.AddProductFragment"
+        android:label="Add Product"/>
+</navigation>
