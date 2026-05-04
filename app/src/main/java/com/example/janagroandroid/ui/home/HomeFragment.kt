@@ -78,7 +78,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             if (isUserLoggedIn) {
                 // Tampilan jika SUDAH LOGIN
                 binding.tvGreetingName.text = user?.name ?: "Hello!"
-                binding.tvLocation.text = "Pasuruan, ID"
+                binding.tvLocation.text = "Suroboyo mas, ID"
                 binding.ivProfile.setImageResource(R.drawable.ic_user_placeholder)
 
                 // (Opsional) Jika kamu mau tombol 'Tambah Produk' hanya untuk Petani:

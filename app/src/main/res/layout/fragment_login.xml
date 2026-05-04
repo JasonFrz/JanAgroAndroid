@@ -14,7 +14,7 @@
         android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="#2E7D32" />
+     />
 
     <TextView
         android:id="@+id/tvWelcome"
